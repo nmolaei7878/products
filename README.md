@@ -1,6 +1,6 @@
 # Requirement
 
-- node version 20
+- nodeJs version 20 >
 
 # Install & Running
 

@@ -5,3 +5,9 @@ export async function getProductById(id: string) {
   const product = (await res.json()) as Product;
   return product;
 }
+
+export async function getProducts() {
+  const res = await fetch('https://fakestoreapi.com/products');
+  const products = (await res.json()) as Product[];
+  return products;
+}

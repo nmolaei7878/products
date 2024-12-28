@@ -1,11 +1,11 @@
 'use client';
 
-import { getProductById } from '@/queries/useProduct';
+import { getProductById } from '@/api/product';
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 const ProductDetail = () => {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
 
   const { data, error, isLoading } = useQuery({
     queryKey: [id],
@@ -31,8 +31,8 @@ const ProductDetail = () => {
               width={500}
               height={500}
               className="rounded-3xl h-full w-full"
-              src={data?.image}
-              alt={data?.title}
+              src={data?.image ?? '*static import*'}
+              alt={data?.title ?? ''}
             />
           </div>
           <div>

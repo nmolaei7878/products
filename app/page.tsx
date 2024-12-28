@@ -1,8 +1,8 @@
 'use client';
 
+import { getProducts } from '@/api/product';
 import { DebouncedInput } from '@/components/DebouncedInput';
 import ListTile from '@/components/ListTile';
-import { getProducts } from '@/queries/useProducts';
 import { Product } from '@/types/Product';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
